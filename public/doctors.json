@@ -1,7 +1,7 @@
 [
   {
     "id": "001",
-    "name": "Dr Mistry",
+    "name": "Dr Raymond",
     "categories": "Psychiatrists",
     "weekDays": "Sat-Sun",
     "time": "10AM-4PM",
@@ -51,6 +51,6 @@
     "weekDays": "Tue-Fri",
     "time": "9AM-4PM",
     "fees": 20,
-    "pic": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fblack-doctor&psig=AOvVaw1QytzPqz3JHZ9Js9Oj3jn_&ust=1701872995026000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCMCNuIzB-IIDFQAAAAAdAAAAABAE"
+    "pic": "https://t4.ftcdn.net/jpg/06/36/65/67/360_F_636656735_WMBqiQHPgdW6nV6gtbbY8hHD3Ncd1FtP.jpg"
   }
 ]
