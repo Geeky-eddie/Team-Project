@@ -27,7 +27,7 @@ Problem Statement:
 Traditional healthcare systems lack transparency, security, and interoperability, leading to inefficiencies in patient data management, delayed insurance claims, and limited proactive health management.
 
 Background and Research:
-Extensive research revealed the shortcomings of existing healthcare systems, emphasizing the need for a secure and interoperable solution. web5 emerged as a viable solution for tamper-proof data storage, while wearables and IoT devices provided opportunities for real-time health monitoring.
+Extensive research revealed the shortcomings of existing healthcare systems, emphasizing the need for a secure and interoperable solution. web5 emerged as a viable solution for tamper-proof data storage, while wearables and IoT devices provided opportunities for real-time health monitoring...
 
 Assumptions and Hypotheses:
 Assuming that Web5 can address security concerns, wearables enhance real-time health tracking, and smart contracts expedite insurance claims, Med-Chain aims to revolutionize healthcare delivery.
