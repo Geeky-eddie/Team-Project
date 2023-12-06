@@ -1,0 +1,56 @@
+[
+  {
+    "id": "001",
+    "name": "Dr Mistry",
+    "categories": "Psychiatrists",
+    "weekDays": "Sat-Sun",
+    "time": "10AM-4PM",
+    "fees": 20,
+    "pic": "https://raw.githubusercontent.com/arifulsajib/pictures-for-projects/main/doctors/doctor1.jpg"
+  },
+  {
+    "id": "002",
+    "name": "Dr Brick Wall",
+    "categories": "gynecologists",
+    "weekDays": "Mon-Fri",
+    "time": "9AM-5PM",
+    "fees": 15,
+    "pic": "https://raw.githubusercontent.com/arifulsajib/pictures-for-projects/main/doctors/doctor2.png"
+  },
+  {
+    "id": "003",
+    "name": "Dr Ether",
+    "categories": "Ophthalmologists",
+    "weekDays": "Sun-Fri",
+    "time": "11AM-5PM",
+    "fees": 35,
+    "pic": "https://raw.githubusercontent.com/arifulsajib/pictures-for-projects/main/doctors/doctor3.png"
+  },
+  {
+    "id": "004",
+    "name": "Dr Truluck",
+    "categories": "Allergists",
+    "weekDays": "Fri-Mon",
+    "time": "8AM-5PM",
+    "fees": 30,
+    "pic": "https://raw.githubusercontent.com/arifulsajib/pictures-for-projects/main/doctors/doctor4.jpg"
+  },
+  {
+    "id": "005",
+    "name": "Dr Payne",
+    "categories": "Dermatologists",
+    "weekDays": "Sat-thu",
+    "time": "11AM-5PM",
+    "fees": 15,
+    "pic": "https://media.istockphoto.com/id/1201657177/photo/smiling-black-female-doctor-in-white-coat-posing-with-folded-arms.jpg?s=612x612&w=0&k=20&c=1SHhnT53JQ4acR4pNsRHHQXDUJCTAMI9Pg8-UG81Pao="
+  },
+  {
+    "id": "006",
+    "name": "Dr Johnathan",
+    "categories": "Neurologist",
+    "weekDays": "Tue-Fri",
+    "time": "9AM-4PM",
+    "fees": 20,
+    "pic": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fblack-doctor&psig=AOvVaw1QytzPqz3JHZ9Js9Oj3jn_&ust=1701872995026000&source=images&cd=vfe&ved=0CBIQjRxqFwoTCMCNuIzB-IIDFQAAAAAdAAAAABAE"
+  }
+]

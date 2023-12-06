@@ -1,0 +1,82 @@
+[
+    {
+      "id": "001",
+      "name": "Blood Analisys",
+      "openDays": "Everyday",
+      "countDoctors": 4,
+      "details": "We have Specialized doctors to anlalize your blood. You may have blood tests to keep track of how well you are managing a condition such as diabetes or high cholesterol. You may also have them for routine checkups or when you are ill. Blood tests are very common.",
+      "pic": "https://media.istockphoto.com/id/520074057/photo/nurse-checking-bag-of-blood-while-patient-gives-donation.jpg?s=612x612&w=0&k=20&c=D7hK0E037O4XKjfaKXJx0JYUp0VpWjtP2eusGSih87E="
+    },
+    {
+      "id": "002",
+      "name": "Cancer Treatment",
+      "openDays": "Mon-Fri",
+      "countDoctors": 5,
+      "details": "Many procedures and drugs are available to treat cancer, with many more being studied. we provide treatments like surgery and radiation therapy, which are used to treat a specific tumor or area of the body. Drug treatments (such as chemotherapy, immunotherapy, or targeted therapy) are often called systemic treatments .",
+      "pic": "https://www.cidrap.umn.edu/sites/default/files/styles/article_detail/public/images/news/man_on_o2_in_hospital_bed.jpg?itok=wuJOREIU"
+    },
+    {
+      "id": "003",
+      "name": "Hair Transplant",
+      "openDays": "Fri-Sun",
+      "countDoctors": 2,
+      "details": "Hair transplanting is a surgical technique that removes hair follicles from one part of the body, called the 'donor site', to a bald or balding part of the body known as the 'recipient site'. The technique is primarily used to treat male pattern baldness. We have the best doctors for the treatment",
+      "pic": "https://media.post.rvohealth.io/wp-content/uploads/2020/07/Hair-transplant-surgery-732x549-thumbanil.jpg"
+    },
+    {
+      "id": "004",
+      "name": "Skin Problems",
+      "openDays": "Mon-Thu",
+      "countDoctors": 3,
+      "details": "Skin disorders vary greatly in symptoms and severity. They can be temporary or permanent, and may be painless or painful. Some have situational causes, while others may be genetic. Some skin conditions are minor, and others can be life-threatening. We have specilized doctors",
+      "pic": "https://media.healthnews.com/images/featured-big/2023/05/Darker-Skin.jpg"
+    },
+    {
+      "id": "005",
+      "name": "Eye Treatment",
+      "openDays": "Fri-Sun",
+      "countDoctors": 4,
+      "details": "Eye is a very sensitive part of our body. Eye problems can involve any and all of these parts like Cornea, Iris, Lens etc. Come to us and we will provide the best treatment for you. ",
+      "pic": "https://cdn.standardmedia.co.ke/images/wysiwyg/images/LEWFv5NqT41IX10MvvarmaJWx9dOB4SmVze5UN72.jpg"
+    },
+    {
+      "id": "006",
+      "name": "Brain tumor Surgary",
+      "openDays": "Fri-Sun",
+      "countDoctors": 3,
+      "details": "To remove a brain tumor, a neurosurgeon makes an opening in the skull. This operation is called a craniotomy. Whenever possible, the surgeon attempts to remove the entire tumor. If the tumor cannot be completely removed without damaging vital brain tissue, your doctor may remove as much of the tumor as possible. We will give you the best services and we have the best equipments for this surgary.",
+      "pic": "https://raw.githubusercontent.com/arifulsajib/pictures-for-projects/main/healthService/service6.jpg"
+    },
+    {
+      "id": "007",
+      "name": "Pregnancy Care",
+      "openDays": "Everyday",
+      "countDoctors": 7,
+      "details": "Your care during pregnancy (antenatal care) can be provided by a midwife, hospital doctor, GP or obstetrician or a combination of these. You will get the best care possible in our Clinic. Do come to us.",
+      "pic": "https://media.istockphoto.com/id/638722624/photo/happy-pregnant-woman-having-ultrasound-scan.jpg?s=612x612&w=0&k=20&c=d9WxLytuJtMCnd3FdMEAuug1fRRxX15zhfIg73fp5NI="
+    },
+    {
+      "id": "008",
+      "name": "Depression treatment",
+      "openDays": "Everyday",
+      "countDoctors": 3,
+      "details": "Medications and psychotherapy are effective for most people with depression. Your primary care doctor or psychiatrist can prescribe medications to relieve symptoms. However, many people with depression also benefit from seeing a psychiatrist, psychologist or other mental health professional. We have experienced psycatrist for this.",
+      "pic": "https://raw.githubusercontent.com/arifulsajib/pictures-for-projects/main/healthService/service8.jpg"
+    },
+    {
+      "id": "009",
+      "name": "Kidney Stone",
+      "openDays": "Sun-Thu",
+      "countDoctors": 7,
+      "details": "The treatment for a kidney stone depends on the size of the stone, what it is made of, whether it is causing pain and whether it is blocking your urinary tract. To answer these questions and to figure out the right treatment for you, your doctor might ask you to have a urine test, blood test, x-ray and/or CT scan. A CT scan sometimes uses contrast dye. If you have ever had a problem with contrast dye, be sure to tell your doctor about it before you have your CT scan. Our doctor will check which tratement suits you. Do visit us",
+      "pic": "https://raw.githubusercontent.com/arifulsajib/pictures-for-projects/main/healthService/service9.jpg"
+    },
+    {
+      "id": "010",
+      "name": "Plastic surgery",
+      "openDays": "Friday",
+      "countDoctors": 7,
+      "details": "Plastic surgery is a surgical specialty involving the restoration, reconstruction, or alteration of the human body. It can be divided into two main categories: reconstructive surgery and cosmetic surgery. Reconstructive surgery includes craniofacial surgery, hand surgery, microsurgery, and the treatment of burns. While reconstructive surgery aims to reconstruct a part of the body or improve its functioning, cosmetic (or aesthetic) surgery aims at improving the appearance of it. We have the best equipments and doctors who can make surgary successful.",
+      "pic": "https://raw.githubusercontent.com/arifulsajib/pictures-for-projects/main/healthService/service10.jpg"
+    }
+  ]
