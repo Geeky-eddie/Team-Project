@@ -2,7 +2,7 @@
   {
     "id": "001",
     "name": "Dr Raymond",
-    "categories": "Psychiatrists",
+    "categories": "Psychiatrist",
     "weekDays": "Sat-Sun",
     "time": "10AM-4PM",
     "fees": 20,
@@ -11,7 +11,7 @@
   {
     "id": "002",
     "name": "Dr Brian",
-    "categories": "gynecologists",
+    "categories": "gynecologist",
     "weekDays": "Mon-Fri",
     "time": "9AM-5PM",
     "fees": 15,
@@ -20,7 +20,7 @@
   {
     "id": "003",
     "name": "Dr Lily",
-    "categories": "Ophthalmologists",
+    "categories": "Ophthalmologist",
     "weekDays": "Sun-Fri",
     "time": "11AM-5PM",
     "fees": 35,
@@ -29,7 +29,7 @@
   {
     "id": "004",
     "name": "Dr Strange",
-    "categories": "Allergists",
+    "categories": "Allergist",
     "weekDays": "Fri-Mon",
     "time": "8AM-5PM",
     "fees": 30,
@@ -38,7 +38,7 @@
   {
     "id": "005",
     "name": "Dr Richie",
-    "categories": "Dermatologists",
+    "categories": "Dermatologist",
     "weekDays": "Sat-thu",
     "time": "11AM-5PM",
     "fees": 15,
