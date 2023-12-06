@@ -10,34 +10,34 @@
   },
   {
     "id": "002",
-    "name": "Dr Brick Wall",
+    "name": "Dr Brian",
     "categories": "gynecologists",
     "weekDays": "Mon-Fri",
     "time": "9AM-5PM",
     "fees": 15,
-    "pic": "https://raw.githubusercontent.com/arifulsajib/pictures-for-projects/main/doctors/doctor2.png"
+    "pic": "https://blackdoctorsusa.com/assets/images/blackdoctor_jobs.jpg"
   },
   {
     "id": "003",
-    "name": "Dr Ether",
+    "name": "Dr Lily",
     "categories": "Ophthalmologists",
     "weekDays": "Sun-Fri",
     "time": "11AM-5PM",
     "fees": 35,
-    "pic": "https://raw.githubusercontent.com/arifulsajib/pictures-for-projects/main/doctors/doctor3.png"
+    "pic": "https://static8.depositphotos.com/1518767/1033/i/450/depositphotos_10338160-stock-photo-smiling-female-doctor-looking-at.jpg"
   },
   {
     "id": "004",
-    "name": "Dr Truluck",
+    "name": "Dr Strange",
     "categories": "Allergists",
     "weekDays": "Fri-Mon",
     "time": "8AM-5PM",
     "fees": 30,
-    "pic": "https://raw.githubusercontent.com/arifulsajib/pictures-for-projects/main/doctors/doctor4.jpg"
+    "pic": "https://www.inspirahealthnetwork.org/sites/default/files/2022-03/iStock-1315185798.jpg"
   },
   {
     "id": "005",
-    "name": "Dr Payne",
+    "name": "Dr Richie",
     "categories": "Dermatologists",
     "weekDays": "Sat-thu",
     "time": "11AM-5PM",
@@ -46,7 +46,7 @@
   },
   {
     "id": "006",
-    "name": "Dr Johnathan",
+    "name": "Dr Jonathan",
     "categories": "Neurologist",
     "weekDays": "Tue-Fri",
     "time": "9AM-4PM",

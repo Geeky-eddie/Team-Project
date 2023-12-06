@@ -1,10 +1,10 @@
 [
     {
       "id": "001",
-      "name": "Blood Analisys",
+      "name": "Blood Analysis",
       "openDays": "Everyday",
       "countDoctors": 4,
-      "details": "We have Specialized doctors to anlalize your blood. You may have blood tests to keep track of how well you are managing a condition such as diabetes or high cholesterol. You may also have them for routine checkups or when you are ill. Blood tests are very common.",
+      "details": "We have Specialized doctors to analyze your blood. You may have blood tests to keep track of how well you are managing a condition such as diabetes or high cholesterol. You may also have them for routine checkups or when you are ill. Blood tests are very common.",
       "pic": "https://media.istockphoto.com/id/520074057/photo/nurse-checking-bag-of-blood-while-patient-gives-donation.jpg?s=612x612&w=0&k=20&c=D7hK0E037O4XKjfaKXJx0JYUp0VpWjtP2eusGSih87E="
     },
     {
@@ -36,12 +36,12 @@
       "name": "Eye Treatment",
       "openDays": "Fri-Sun",
       "countDoctors": 4,
-      "details": "Eye is a very sensitive part of our body. Eye problems can involve any and all of these parts like Cornea, Iris, Lens etc. Come to us and we will provide the best treatment for you. ",
+      "details": "The is a very sensitive part of our body. Eye problems can involve any and all of these parts like Cornea, Iris, Lens etc. Come to us and we will provide the best treatment for you. ",
       "pic": "https://cdn.standardmedia.co.ke/images/wysiwyg/images/LEWFv5NqT41IX10MvvarmaJWx9dOB4SmVze5UN72.jpg"
     },
     {
       "id": "006",
-      "name": "Brain tumor Surgary",
+      "name": "Brain tumor Surgery",
       "openDays": "Fri-Sun",
       "countDoctors": 3,
       "details": "To remove a brain tumor, a neurosurgeon makes an opening in the skull. This operation is called a craniotomy. Whenever possible, the surgeon attempts to remove the entire tumor. If the tumor cannot be completely removed without damaging vital brain tissue, your doctor may remove as much of the tumor as possible. We will give you the best services and we have the best equipments for this surgary.",
