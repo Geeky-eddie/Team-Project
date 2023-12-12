@@ -36,7 +36,7 @@ const Header = () => {
               <Nav.Link as={NavLink} className="nav-link" to="/login">
                 <button className="bg-amber-400 w-40 h-10 rounded-lg text-lg text-black hover:text-white">
                   <i className="fas fa-sign-in-alt me-2 "></i>
-                  Login
+                  Sign in
                 </button>
               </Nav.Link>
             </Navbar.Text>

@@ -9,9 +9,9 @@ const ServicesSection = () => {
   return (
     <div className="my-5">
       <h2 className="text-center blue-color">
-        <i className="fas fa-flask"></i> OUR MAIN SERVICES
+        <i className="fas fa-flask"></i> OUR SERVICES
       </h2>
-      <p className="text-center fs-5">Human care is more than healthcare. We prefer quality over anything.</p>
+      <p className="text-center fs-5">Your Source for Safe Health Records.</p>
       <div className="container">
         <div className="row g-3">
           {services.slice(0, 6).map((service) => (

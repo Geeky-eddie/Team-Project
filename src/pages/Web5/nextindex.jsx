@@ -1,11 +1,8 @@
-
-import { useState, useEffect } from "react";
 import { Web5 } from "@web5/api/browser";
+import { useState, useEffect } from "react";
 import styles from "../../../src/pages/style/Web5.module.css";
 
-const doctorDID = 'did:ion:EiAmJ02qIwt6EBoxIUC4AXNSP49hA3GAoaH-WybrZgIYqQ:eyJkZWx0YSI6eyJwYXRjaGVzIjpbeyJhY3Rpb24iOiJyZXBsYWNlIiwiZG9jdW1lbnQiOnsicHVibGljS2V5cyI6W3siaWQiOiJkd24tc2lnIiwicHVibGljS2V5SndrIjp7ImNydiI6IkVkMjU1MTkiLCJrdHkiOiJPS1AiLCJ4IjoiMEhBNTk1MFZJREVIeEVtM0lQbHNmTmpJVGtnNXNhd0VuOWpBenI0THgzayJ9LCJwdXJwb3NlcyI6WyJhdXRoZW50aWNhdGlvbiJdLCJ0eXBlIjoiSnNvbldlYktleTIwMjAifSx7ImlkIjoiZHduLWVuYyIsInB1YmxpY0tleUp3ayI6eyJjcnYiOiJzZWNwMjU2azEiLCJrdHkiOiJFQyIsIngiOiJ0cFZjbEJJUEFSYW9LeDNoNm8yM1ZlM0VDOTdFMHdCUGRGTVJKejdVSDlFIiwieSI6IjNUQ2pQUmRkTjZMdWplNmxZNEYyajI3OE4yaWpSN05fd1BVNkoteG1xTWsifSwicHVycG9zZXMiOlsia2V5QWdyZWVtZW50Il0sInR5cGUiOiJKc29uV2ViS2V5MjAyMCJ9XSwic2VydmljZXMiOlt7ImlkIjoiZHduIiwic2VydmljZUVuZHBvaW50Ijp7ImVuY3J5cHRpb25LZXlzIjpbIiNkd24tZW5jIl0sIm5vZGVzIjpbImh0dHBzOi8vZHduLnRiZGRldi5vcmcvZHduMCIsImh0dHBzOi8vZHduLnRiZGRldi5vcmcvZHduNCJdLCJzaWduaW5nS2V5cyI6WyIjZHduLXNpZyJdfSwidHlwZSI6IkRlY2VudHJhbGl6ZWRXZWJOb2RlIn1dfX1dLCJ1cGRhdGVDb21taXRtZW50IjoiRWlDWjNGRG9GVTFtSF9sQWxDSlBTaWk0WVNPZkFsdDRYNkNQeVJLOUR1TThsQSJ9LCJzdWZmaXhEYXRhIjp7ImRlbHRhSGFzaCI6IkVpREF4QUdIRV9uSDh1aE1PRnNmdkxsV2dqTEc2NnAxZ2plc1lxamVpeG1NQ0EiLCJyZWNvdmVyeUNvbW1pdG1lbnQiOiJFaUNVLTh1dUlLLWFDWDVNb1loaHNrZGVpdE5iNldYVnNIWVRudnNuQm5aMExBIn19';
-
-const Home = () => {
+export default function Home() {
   const [web5, setWeb5] = useState(null);
   const [myDid, setMyDid] = useState(null);
   const [recipientDid, setRecipientDid] = useState('');
@@ -24,12 +21,22 @@ const Home = () => {
   const [lastPhysicalExam, setLastPhysicalExam] = useState('');
   const [medicalAppointmentReason, setMedicalAppointmentReason] = useState('');
 
+
+  
+
+
+  const doctorDID = ['did:ion:EiAmJ02qIwt6EBoxIUC4AXNSP49hA3GAoaH-WybrZgIYqQ:eyJkZWx0YSI6eyJwYXRjaGVzIjpbeyJhY3Rpb24iOiJyZXBsYWNlIiwiZG9jdW1lbnQiOnsicHVibGljS2V5cyI6W3siaWQiOiJkd24tc2lnIiwicHVibGljS2V5SndrIjp7ImNydiI6IkVkMjU1MTkiLCJrdHkiOiJPS1AiLCJ4IjoiMEhBNTk1MFZJREVIeEVtM0lQbHNmTmpJVGtnNXNhd0VuOWpBenI0THgzayJ9LCJwdXJwb3NlcyI6WyJhdXRoZW50aWNhdGlvbiJdLCJ0eXBlIjoiSnNvbldlYktleTIwMjAifSx7ImlkIjoiZHduLWVuYyIsInB1YmxpY0tleUp3ayI6eyJjcnYiOiJzZWNwMjU2azEiLCJrdHkiOiJFQyIsIngiOiJ0cFZjbEJJUEFSYW9LeDNoNm8yM1ZlM0VDOTdFMHdCUGRGTVJKejdVSDlFIiwieSI6IjNUQ2pQUmRkTjZMdWplNmxZNEYyajI3OE4yaWpSN05fd1BVNkoteG1xTWsifSwicHVycG9zZXMiOlsia2V5QWdyZWVtZW50Il0sInR5cGUiOiJKc29uV2ViS2V5MjAyMCJ9XSwic2VydmljZXMiOlt7ImlkIjoiZHduIiwic2VydmljZUVuZHBvaW50Ijp7ImVuY3J5cHRpb25LZXlzIjpbIiNkd24tZW5jIl0sIm5vZGVzIjpbImh0dHBzOi8vZHduLnRiZGRldi5vcmcvZHduMCIsImh0dHBzOi8vZHduLnRiZGRldi5vcmcvZHduNCJdLCJzaWduaW5nS2V5cyI6WyIjZHduLXNpZyJdfSwidHlwZSI6IkRlY2VudHJhbGl6ZWRXZWJOb2RlIn1dfX1dLCJ1cGRhdGVDb21taXRtZW50IjoiRWlDWjNGRG9GVTFtSF9sQWxDSlBTaWk0WVNPZkFsdDRYNkNQeVJLOUR1TThsQSJ9LCJzdWZmaXhEYXRhIjp7ImRlbHRhSGFzaCI6IkVpREF4QUdIRV9uSDh1aE1PRnNmdkxsV2dqTEc2NnAxZ2plc1lxamVpeG1NQ0EiLCJyZWNvdmVyeUNvbW1pdG1lbnQiOiJFaUNVLTh1dUlLLWFDWDVNb1loaHNrZGVpdE5iNldYVnNIWVRudnNuQm5aMExBIn19', 
+  'did:ion:EiCMNo5Vr20eR7NLfKMn2vnGXKatl-Jk9dIGqlXSBTSVVQ:eyJkZWx0YSI6eyJwYXRjaGVzIjpbeyJhY3Rpb24iOiJyZXBsYWNlIiwiZG9jdW1lbnQiOnsicHVibGljS2V5cyI6W3siaWQiOiJkd24tc2lnIiwicHVibGljS2V5SndrIjp7ImNydiI6IkVkMjU1MTkiLCJrdHkiOiJPS1AiLCJ4IjoiUUZpUjRLYTBCcVBPUFN1aDZhSW1JSjJMYXQtZFhlN3E0Q2liZzNUZWxaVSJ9LCJwdXJwb3NlcyI6WyJhdXRoZW50aWNhdGlvbiJdLCJ0eXBlIjoiSnNvbldlYktleTIwMjAifSx7ImlkIjoiZHduLWVuYyIsInB1YmxpY0tleUp3ayI6eyJjcnYiOiJzZWNwMjU2azEiLCJrdHkiOiJFQyIsIngiOiJnYWN3U3lIQ2VaR3FGWmRlaWJ3bWpfd1R0V2RPNVdmeWZhMUxxTGwxS1YwIiwieSI6ImcwT3d5TFVSTnlrVXZ2MThpbFpaaUJwdDVmQUdFX250ZS1LT2VGYmI4UXMifSwicHVycG9zZXMiOlsia2V5QWdyZWVtZW50Il0sInR5cGUiOiJKc29uV2ViS2V5MjAyMCJ9XSwic2VydmljZXMiOlt7ImlkIjoiZHduIiwic2VydmljZUVuZHBvaW50Ijp7ImVuY3J5cHRpb25LZXlzIjpbIiNkd24tZW5jIl0sIm5vZGVzIjpbImh0dHBzOi8vZHduLnRiZGRldi5vcmcvZHduMCIsImh0dHBzOi8vZHduLnRiZGRldi5vcmcvZHduNSJdLCJzaWduaW5nS2V5cyI6WyIjZHduLXNpZyJdfSwidHlwZSI6IkRlY2VudHJhbGl6ZWRXZWJOb2RlIn1dfX1dLCJ1cGRhdGVDb21taXRtZW50IjoiRWlBRGpHSTJ6Rkw4bmF1U0t2Qm41ZEM4cUNaYjhsZEppR3BuSUlCcFBNYlNXQSJ9LCJzdWZmaXhEYXRhIjp7ImRlbHRhSGFzaCI6IkVpRFJzMUNuUVd5cjhiWnVVYlBsdE84WEt3ZF9QcFlmd0RNZzNZbWlaZ25IUEEiLCJyZWNvdmVyeUNvbW1pdG1lbnQiOiJFaUFhRTR2ajYzWWZlTUYzdTRiXzIxZlJKdkNfeDhLR05maloxWGRMSUtQVVJRIn19'] ;
+  
+
+
   useEffect(() => {
     const initWeb5 = async () => {
-      const { web5, did } = await Web5.connect({ sync: '3s' });
-      setWeb5(web5);
-      setMyDid(did);
+    const { web5, did } = await Web5.connect({sync: '3s'});
+    setWeb5(web5);
+    setMyDid(did);
 
+      
       if (web5 && did) {
         await configureProtocol(web5, did);
 
@@ -40,11 +47,13 @@ const Home = () => {
     initWeb5();
   }, []);
 
+
+
   const checkIfDoctor = (userDid) => {
-    return userDid === doctorDID;
+    return doctorDID.includes(userDid);
   };
 
- 
+
   const showNotification = (message) => {
     alert(message);
   };
@@ -56,7 +65,7 @@ const Home = () => {
     return await web5.dwn.protocols.query({
       message: {
         filter: {
-          protocol: "https://med-chain.com/protocol",
+          protocol: "https://blackgirlbytes.dev/burn-book-finale",
         },
       },
     });
@@ -68,7 +77,7 @@ const Home = () => {
       from: did,
       message: {
         filter: {
-          protocol: "https://med-chain.com/protocol",
+          protocol: "https://blackgirlbytes.dev/burn-book-finale",
         },
       },
     });
@@ -93,7 +102,7 @@ const Home = () => {
 
   const defineNewProtocol = () => {
     return {
-      protocol: "https://med-chain.com/protocol",
+      protocol: "https://blackgirlbytes.dev/burn-book-finale",
       published: true,
       types: {
         secretMessage: {
@@ -245,7 +254,7 @@ const writeToDwnSecretMessage = async (messageObj) => {
       timestamp: `${currentDate} ${currentTime}`,
       sender: myDid,
       type: 'Direct',
-      recipientDid: recipientDid,
+      recipientDid: recipientDid, // Ensure recipientDid is correctly set
       imageUrl: imageUrl,
       fullName: fullName,
       city: city,
@@ -286,7 +295,7 @@ const writeToDwnSecretMessage = async (messageObj) => {
         from: myDid,
         message: {
           filter: {
-            protocol: "https://med-chain.com/protocol",
+            protocol: "https://blackgirlbytes.dev/burn-book-finale",
             schema: "https://example.com/directMessageSchema",
           },
         },
@@ -320,7 +329,7 @@ const writeToDwnSecretMessage = async (messageObj) => {
       const response = await web5.dwn.records.query({
         message: {
           filter: {
-            protocol: "https://med-chain.com/protocol",
+            protocol: "https://blackgirlbytes.dev/burn-book-finale",
           },
         },
       });
@@ -440,38 +449,42 @@ const writeToDwnSecretMessage = async (messageObj) => {
 
 
 
-  const deleteMessage = async (recordId) => {
-    try {
-      const response = await web5.dwn.records.query({
+const deleteMessage = async (recordId) => {
+  try {
+    const response = await web5.dwn.records.query({
+      message: {
+        filter: {
+          recordId: recordId,
+        },
+      },
+    });
+
+    if (response.records && response.records.length > 0) {
+      const record = response.records[0];
+      const deleteResult = await web5.dwn.records.delete({
         message: {
-          filter: {
-            recordId: recordId,
-          },
+          recordId: recordId,
         },
       });
-  
-      if (response.records && response.records.length > 0) {
-        const record = response.records[0];
-        const deleteResult = await record.delete();
-  
-        if (deleteResult.status.code === 202) {
-          console.log('Message deleted successfully');
-        
-          await fetchMessages();
-        } else {
-          console.error('Error deleting message:', deleteResult.status);
-        }
+
+      if (deleteResult.status.code === 202) {
+        console.log('Message deleted successfully');
+        await fetchMessages();
       } else {
-        console.error('No record found with the specified ID');
+        console.error('Error deleting message:', deleteResult.status);
       }
-    } catch (error) {
-      console.error('Error in deleteMessage:', error);
+    } else {
+      console.error('No record found with the specified ID');
     }
-  };
-  
+  } catch (error) {
+    console.error('Error in deleteMessage:', error);
+  }
+};
+
+
 
   return (
-    <div>
+    <div >
       {/* <div className={styles.header}>
         <div className={styles.avatar}>DB</div>
         <h1 className={styles.title}>Digital Burn Book</h1>
@@ -479,21 +492,22 @@ const writeToDwnSecretMessage = async (messageObj) => {
   
       <div className={styles.formContainer}>
         <form onSubmit={handleSubmit}>
-          {/* Render options based on user role */}
+        
           {userRole === 'Doctor' && (
             <>
               <textarea
                 className={styles.textarea}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder="Write your secret message here"
+                placeholder="Confirm appointment with patient"
+                
               />
              <select
                 className={styles.select}
                 value={messageType}
                 onChange={(e) => setMessageType(e.target.value)}
               >
-                <option value="Secret">Save to self</option>
+                <option value="Secret">Save to Drafts</option>
                 <option value="Direct">Confidential</option>
               </select>
               {messageType === 'Direct' && (
@@ -506,15 +520,27 @@ const writeToDwnSecretMessage = async (messageObj) => {
                 />
               )}
                 <div className={styles.buttonContainer}>
-            <button className={styles.button} type="submit">Set Appointment</button>
-            <button className={styles.secondaryButton} type="button" onClick={fetchMessages}>Refresh Appointments</button>
-            <button className={styles.secondaryButton} type="button" onClick={handleCopyDid}>Copy My DID</button>
+                                  <button className="bg-amber-400 w-full sm:w-40 h-10 rounded-lg text-lg text-black" type="submit">
+                    <span className="w-full">Set Appointment</span>
+                  </button>
+
+                  <button className="bg-amber-400 w-full sm:w-80 h-10 rounded-lg text-lg text-black" type="button" onClick={fetchMessages}>
+                    <span className="w-full">Refresh Appointments</span>
+                  </button>
+
+                  <button className="bg-amber-400 w-full sm:w-40 h-10 rounded-lg text-lg text-black" type="button" onClick={handleCopyDid}>
+                    <span className="w-full">Copy My DID</span>
+                  </button>
+
           </div>
             </>
           )}
           
           {userRole === 'Visitor' && (
             <>
+            <div className=" bg-cyan-500 shadow-lg shadow-cyan-500/50  text-lg text-black">
+
+           
               <input
               className={styles.input}
               type="text"
@@ -581,7 +607,7 @@ const writeToDwnSecretMessage = async (messageObj) => {
                 value={messageType}
                 onChange={(e) => setMessageType(e.target.value)}
               >
-                <option value="Secret">Save to self</option>
+                <option value="Secret">Save to Drafts</option>
                 <option value="Direct">Confidential</option>
               </select>
               {messageType === 'Direct' && (
@@ -594,9 +620,10 @@ const writeToDwnSecretMessage = async (messageObj) => {
                 />
               )}
                <div className={styles.buttonContainer}>
-            <button className={styles.button} type="submit">Submit Message</button>
+            <button className={styles.button} type="submit">Request Appointment<i class="fa-solid fa-paper-plane"></i></button>
             <button className={styles.secondaryButton} type="button" onClick={fetchMessages}>Refresh Appointments</button>
             <button className={styles.secondaryButton} type="button" onClick={handleCopyDid}>Copy My DID</button>
+          </div>
           </div>
             </>
           )}
@@ -687,45 +714,5 @@ const writeToDwnSecretMessage = async (messageObj) => {
         </div>
       ))}
     </div>
-  );
-};
-
-export default Home;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// code starts here
-
-
-
-
-
-
-
+  )};
+  
