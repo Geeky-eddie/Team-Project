@@ -32,7 +32,7 @@ const Banner = () => {
         <img className="w-full h-full object-cover" src={banner3} alt="Third slide" />
 
         <Carousel.Caption className="caption">
-          <h3>Medi-Chain</h3>
+          <h3>Med-Chain</h3>
           <p>Trust Med-Chain to take care of you</p>
         </Carousel.Caption>
       </Carousel.Item>

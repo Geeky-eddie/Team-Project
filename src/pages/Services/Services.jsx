@@ -7,9 +7,9 @@ const Services = () => {
 
   return (
     <div className="my-5">
-      <h2 className="text-center blue-color">
+      {/* <h2 className="text-center blue-color">
         <i className="fas fa-flask"></i> OUR MAIN SERVICES
-      </h2>
+      </h2> */}
       <p className="text-center fs-5">Human care is more than healthcare. We prefer quality over anything.</p>
       <div className="container">
         <div className="row g-3">

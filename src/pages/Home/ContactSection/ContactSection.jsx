@@ -8,7 +8,7 @@ const ContactSection = () => {
       </h2>
       <div className="row gx-5">
         <div className="col">
-          <div className="p-3 w-75 mx-auto">
+          <div className=" mx-auto">
             <h2 className="fw-bolder blue-color">Med-Chain</h2>
             <p className="fw-bold text-secondary">Med-Chain ensures the best health care, where your Health information is secure with you.</p>
             <p className="mt-4">
@@ -26,7 +26,7 @@ const ContactSection = () => {
           </div>
         </div>
         <div className="col">
-          <div className="p-3 w-75 mx-auto">
+          <div className=" mx-auto">
             <h4 className="fw-bolder">Opening Hours</h4>
             <table className="table bluish-bg text-secondary fw-bold rounded">
               <tbody>
