@@ -23,7 +23,7 @@ Version: Version 1 (MVP)
 Project Overview:
 Med-Chain is a revolutionary healthcare application that harnesses blockchain, front-end, and back-end technologies to establish a secure, transparent, and user-centric health ecosystem. This comprehensive solution addresses decentralized patient records, real-time health monitoring, and streamlined insurance claims through smart contracts.
 
-Problem Statement:
+Problem Statement:-
 Traditional healthcare systems lack transparency, security, and interoperability, leading to inefficiencies in patient data management, delayed insurance claims, and limited proactive health management.
 
 Background and Research:
