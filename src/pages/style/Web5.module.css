@@ -111,7 +111,7 @@
   }
   
   .secret {
-    background-color: #ff4081;
+    background-color: #4caf50;
     color: #fff;
   }
   
@@ -198,7 +198,7 @@
   }
   
   .deleteButton {
-    background-color: #ff4081;
+    background-color: red;
     color: #fff;
     border: none;
     padding: 8px 12px;
@@ -208,5 +208,5 @@
   }
   
   .deleteButton:hover {
-    background-color: #e0006d; /* Slightly darker on hover */
+    background-color: rgb(215, 2, 2); /* Slightly darker on hover */
   }

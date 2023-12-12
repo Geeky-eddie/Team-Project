@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import img1 from "../../../assets/Images/About/about1.jpg";
 import img2 from "../../../assets/Images/About/about2.png";
 import img3 from "../../../assets/Images/About/about3.jpg";
@@ -24,6 +25,9 @@ const About = () => {
       <div className="container py-5 d-flex flex-column align-items-center text-amber-300">
        
         <h3 className="w-75 text-center">We make sure to give the best health care and clinical service. Book an appointment with us today!!!</h3>
+        <Link to="/Web5form" className="text-decoration-none bg-amber-400 rounded-2xl">
+          <button className="btn  d-block mx-auto bg-amber-400">Book an Appointment</button>
+        </Link>
       </div>
     </div>
   );

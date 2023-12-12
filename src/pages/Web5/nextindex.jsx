@@ -1,6 +1,7 @@
 import { Web5 } from "@web5/api/browser";
 import { useState, useEffect } from "react";
 import styles from "../../../src/pages/style/Web5.module.css";
+import Preloader from "../Preloader/preloader";
 
 export default function Home() {
   const [web5, setWeb5] = useState(null);
@@ -20,7 +21,19 @@ export default function Home() {
   const [email, setEmail] = useState('');
   const [lastPhysicalExam, setLastPhysicalExam] = useState('');
   const [medicalAppointmentReason, setMedicalAppointmentReason] = useState('');
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+   
+    const fetchData = async () => {
+    
+      setTimeout(() => {
+        setLoading(false);
+      }, 6000);
+    };
+
+    fetchData();
+  }, []);
 
   
 
@@ -253,8 +266,8 @@ const writeToDwnSecretMessage = async (messageObj) => {
       text: message,
       timestamp: `${currentDate} ${currentTime}`,
       sender: myDid,
-      type: 'Direct',
-      recipientDid: recipientDid, // Ensure recipientDid is correctly set
+      type: 'Confidential',
+      recipientDid: recipientDid,
       imageUrl: imageUrl,
       fullName: fullName,
       city: city,
@@ -276,7 +289,7 @@ const writeToDwnSecretMessage = async (messageObj) => {
       text: message, 
       timestamp: `${currentDate} ${currentTime}`,
       sender: myDid, 
-      type: 'Secret',
+      type: 'Drafts',
       imageUrl: imageUrl, 
       fullName: fullName,
       city: city,
@@ -295,8 +308,8 @@ const writeToDwnSecretMessage = async (messageObj) => {
         from: myDid,
         message: {
           filter: {
-            protocol: "https://blackgirlbytes.dev/burn-book-finale",
-            schema: "https://example.com/directMessageSchema",
+            protocol: "https://medchain.com",
+            schema: "https://example.com/confidentialMessageSchema",
           },
         },
       });
@@ -485,118 +498,113 @@ const deleteMessage = async (recordId) => {
 
   return (
     <div >
-      {/* <div className={styles.header}>
-        <div className={styles.avatar}>DB</div>
-        <h1 className={styles.title}>Digital Burn Book</h1>
-      </div> */}
+     {loading && <Preloader message="Creating DID, please wait..."/>}
   
-      <div className={styles.formContainer}>
-        <form onSubmit={handleSubmit}>
-        
-          {userRole === 'Doctor' && (
-            <>
-              <textarea
-                className={styles.textarea}
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                placeholder="Confirm appointment with patient"
-                
-              />
-             <select
-                className={styles.select}
-                value={messageType}
-                onChange={(e) => setMessageType(e.target.value)}
-              >
-                <option value="Secret">Save to Drafts</option>
-                <option value="Direct">Confidential</option>
-              </select>
-              {messageType === 'Direct' && (
-                <input
-                  className={styles.input}
-                  type="text"
-                  value={recipientDid}
-                  onChange={e => setRecipientDid(e.target.value)}
-                  placeholder="Enter recipient's DID"
-                />
-              )}
-                <div className={styles.buttonContainer}>
-                                  <button className="bg-amber-400 w-full sm:w-40 h-10 rounded-lg text-lg text-black" type="submit">
-                    <span className="w-full">Set Appointment</span>
-                  </button>
+     <div className={styles.formContainer}>
+  <form onSubmit={handleSubmit}>
 
-                  <button className="bg-amber-400 w-full sm:w-80 h-10 rounded-lg text-lg text-black" type="button" onClick={fetchMessages}>
-                    <span className="w-full">Refresh Appointments</span>
-                  </button>
+    {userRole === 'Doctor' && (
+      <>
+        <textarea
+          className={`${styles.textarea} sm:w-full`}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          placeholder="Confirm appointment with patient"
+        />
+        <select
+          className={`${styles.select} sm:w-full`}
+          value={messageType}
+          onChange={(e) => setMessageType(e.target.value)}
+        >
+          <option value="Secret">Save to Drafts</option>
+          <option value="Direct">Confidential</option>
+        </select>
+        {messageType === 'Direct' && (
+          <input
+            className={`${styles.input} sm:w-full`}
+            type="text"
+            value={recipientDid}
+            onChange={(e) => setRecipientDid(e.target.value)}
+            placeholder="Enter recipient's DID"
+          />
+        )}
+      <div className={`${styles.buttonContainer} flex flex-col sm:flex-row`}>
+  <button className="bg-amber-400 w-full sm:w-40 h-12 rounded-lg text-sm text-black mb-2 sm:mb-0" type="submit">
+    <span className="w-full">Set Appointment</span>
+  </button>
 
-                  <button className="bg-amber-400 w-full sm:w-40 h-10 rounded-lg text-lg text-black" type="button" onClick={handleCopyDid}>
-                    <span className="w-full">Copy My DID</span>
-                  </button>
+  <button className="bg-amber-400 w-full sm:w-40 h-12 rounded-lg text-sm text-black mb-2 sm:ml-2 sm:mt-0" type="button" onClick={fetchMessages}>
+    <span className="w-full">Refresh Appointments</span>
+  </button>
 
-          </div>
-            </>
-          )}
-          
-          {userRole === 'Visitor' && (
-            <>
-            <div className=" bg-cyan-500 shadow-lg shadow-cyan-500/50  text-lg text-black">
+  <button className="bg-amber-400 w-full sm:w-40 h-12 rounded-lg text-sm text-black sm:ml-2 sm:mt-0" type="button" onClick={handleCopyDid}>
+    <span className="w-full">Copy My DID</span>
+  </button>
+</div>
 
-           
+      </>
+    )}
+
+    {userRole === 'Visitor' && (
+      <>
+        <div className="bg-cyan-500 shadow-lg shadow-cyan-500/50 text-lg text-black">
+
+          <input
+            className={`${styles.input} sm:w-full`}
+            type="text"
+            value={fullName}
+            onChange={(e) => setFullName(e.target.value)}
+            placeholder="Enter your full name"
+          />
+          <input
+            className={`${styles.input} sm:w-full`}
+            type="text"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+            placeholder="Enter your current city"
+          />
               <input
-              className={styles.input}
-              type="text"
-              value={fullName}
-              onChange={(e) => setFullName(e.target.value)}
-              placeholder="Enter your full name"
-              />
-              <input
-              className={styles.input}
-              type="text"
-              value={city}
-              onChange={(e) => setCity(e.target.value)}
-              placeholder="Enter your current city"
-              />
-              <input
-              className={styles.input}
+              className={`${styles.input} sm:w-full`}
               type="text"
               value={state}
               onChange={(e) => setState(e.target.value)}
               placeholder="Enter state"
               />
               <input
-              className={styles.input}
+            className={`${styles.input} sm:w-full`}
               type="text"
               value={zipcode}
               onChange={(e) => setZipcode(e.target.value)}
               placeholder="Enter zipcode"
               />
               <input
-              className={styles.input}
+             className={`${styles.input} sm:w-full`}
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter email address"
               />
               <input
-              className={styles.input}
+              className={`${styles.input} sm:w-full`}
               type="date"
               value={lastPhysicalExam}
               onChange={(e) => setLastPhysicalExam(e.target.value)}
               placeholder="Enter date of last physical exam"
               />
               <textarea
-              className={styles.textarea}
+              className={`${styles.textarea} sm:w-full`}
               value={medicalAppointmentReason}
               onChange={(e) => setMedicalAppointmentReason(e.target.value)}
               placeholder="Enter reason for medical appointment"
               />
               <textarea
-                className={styles.textarea}
+                className={`${styles.textarea} sm:w-full`}
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Anything you would like the doctor to know?"
               />
               <input
-                className={styles.input}
+                className={`${styles.input} sm:w-full`}
                 type="text"
                 placeholder="Enter image URL (optional)"
                 value={imageUrl}
@@ -619,20 +627,16 @@ const deleteMessage = async (recordId) => {
                   placeholder="Enter recipient's DID"
                 />
               )}
-               <div className={styles.buttonContainer}>
-            <button className={styles.button} type="submit">Request Appointment<i class="fa-solid fa-paper-plane"></i></button>
-            <button className={styles.secondaryButton} type="button" onClick={fetchMessages}>Refresh Appointments</button>
-            <button className={styles.secondaryButton} type="button" onClick={handleCopyDid}>Copy My DID</button>
-          </div>
-          </div>
+            <div className={`${styles.buttonContainer} flex flex-col sm:flex-row mt-4`}>
+  <button className={`${styles.button} w-full sm:w-full`} type="submit">Request Appointment<i className="fa-solid fa-paper-plane"></i></button>
+  <button className={`${styles.secondaryButton} w-full sm:w-full sm:ml-2 mt-2 sm:mt-0`} type="button" onClick={fetchMessages}>Refresh Appointments</button>
+  <button className={`${styles.secondaryButton} w-full sm:w-full sm:ml-2 mt-2 sm:mt-0`} type="button" onClick={handleCopyDid}>Copy My DID</button>
+</div>
+
+        </div>
             </>
           )}
   
-          {/* <div className={styles.buttonContainer}>
-            <button className={styles.button} type="submit">Submit Message</button>
-            <button className={styles.secondaryButton} type="button" onClick={fetchMessages}>Refresh Appointments</button>
-            <button className={styles.secondaryButton} type="button" onClick={handleCopyDid}>Copy My DID</button>
-          </div> */}
         </form>
   
         {didCopied && <p className={styles.alertText}>DID copied to clipboard!</p>}
