@@ -19,7 +19,7 @@ const ContactSection = () => {
             </p>
             <div className="mb-3 fs-4">
               <i className="fab fa-facebook-square me-4"></i>
-              <i className="fab fa-twitter me-4"></i>
+              <i className="fa-brands fa-x-twitter me-4"></i>
               <i className="fab fa-instagram me-4"></i>
               <i className="fab fa-linkedin-in me-4"></i>
             </div>

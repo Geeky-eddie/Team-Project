@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useEffect } from 'react';
 import AppointmentSection from "../../Home/AppointmentSection/AppointmentSection";
 import Banner from "../../Home/Banner/Banner";
 import ContactSection from "../../Home/ContactSection/ContactSection";
