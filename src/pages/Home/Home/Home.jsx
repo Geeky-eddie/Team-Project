@@ -5,8 +5,6 @@ import Banner from "../../Home/Banner/Banner";
 import ContactSection from "../../Home/ContactSection/ContactSection";
 import Preloader from "../../Preloader/preloader";
 import ServicesSection from "../../Home/ServicesSection/ServicesSection";
-import ChatButton from "../../chatbot/chatbot";
-import Stepss from "../../Steps/Follow";
 import Follow from "../../Steps/Follow";
 
 const Home = () => {
@@ -30,7 +28,7 @@ const Home = () => {
   return (
     <div>
        {loading && <Preloader />}
-       <ChatButton></ChatButton>
+      
       <Banner></Banner>  
       <ServicesSection></ServicesSection>
       <ContactSection></ContactSection>
