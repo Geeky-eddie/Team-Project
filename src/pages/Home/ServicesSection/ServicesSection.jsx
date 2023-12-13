@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 // import useServices from "../../../Hooks/useServices";
 // import Service from "../../../pages/Home/Service/Service";
-import Image1 from "../../../Images/About/accurate.png";
-import Image2 from "../../../Images/About/ehr.png";
-import Image3 from "../../../Images/About/health.png";
-import Image4 from "../../../Images/About/privacy.png";
+import Image1 from "../../../Images/Banner/accurate.webp";
+import Image2 from "../../../Images/Banner/ai.webp";
+import Image3 from "../../../Images/Banner/helphealth.png";
+import Image4 from "../../../Images/Banner/private.svg";
 
 const ServicesSection = () => {
   // const [services] = useServices();
@@ -20,7 +20,7 @@ const ServicesSection = () => {
   <div className="card mb-4 md:mb-0">
   
           <div className="card-body">
-          <img src={Image1} className="card-img-top" alt="image" height="200" />
+          <img src={Image1} className="card-img-top py-6" alt="image" height="200" />
             <h4 className="card-title text-center  text-cyan-500">Accurate Information</h4>
            
             <p>Provide accurate, up-to-date, and complete health information about patients.</p>
@@ -31,10 +31,10 @@ const ServicesSection = () => {
   <div className="card mb-4 md:mb-0">
   
           <div className="card-body">
-          <img src={Image2} className="card-img-top" alt="image" height="200" />
-            <h4 className="card-title text-center">Sharing Power</h4>
+          <img src={Image2} className="card-img-top py-14" alt="image" height="200" />
+            <h4 className="card-title text-center">Smart Chatbot</h4>
            
-            <p>Share personal health record anywhere at anytime better and timely decision making.</p>
+            <p>Start a conversation with our smart chatbot, and schedule an appointment today.</p>
            
           </div>
   </div>
@@ -42,7 +42,7 @@ const ServicesSection = () => {
   <div className="card mb-4 md:mb-0">
   
           <div className="card-body">
-          <img src={Image3} className="card-img-top" alt="image" height="200" />
+          <img src={Image3} className="card-img-top py-4" alt="image" height="200" />
             <h4 className="card-title text-center">Help Health Providers</h4>
            
             <p>Helping Doctors effectively diagnose the patients and prescribe accurate treatments</p>
@@ -51,7 +51,7 @@ const ServicesSection = () => {
   </div>
 
   <div className="card mb-4 md:mb-0">
-  <img src={Image4} className="card-img-top" alt="image" height="200" />
+  <img src={Image4} className="card-img-top py-20" alt="image" height="200" />
           <div className="card-body">
             <h4 className="card-title text-center">Privacy and Security</h4>
            

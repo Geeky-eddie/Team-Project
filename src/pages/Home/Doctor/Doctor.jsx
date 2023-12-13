@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"; 
+import Copydocdid from "../../Copydoctordid/Copydoctordid"
 
 const Doctor = (props) => {
   const { name, categories, weekDays, time, pic } = props.doctor;
@@ -18,8 +19,9 @@ const Doctor = (props) => {
             </h6>
             
             <Link as={Link}  to="/Web5form" className="text-decoration-none">
-              <button className="default-btn d-block mx-auto bg-amber-400 w-40 h-10 rounded-lg text-lg text-black  "><span className=" w-full">Book Now</span></button>
+              <button className="default-btn d-block mx-auto bg-amber-400 w-40 h-10 rounded-lg text-lg text-black  mb-2 "><span className=" w-full">Book Now</span></button>
             </Link>
+            <Copydocdid></Copydocdid>
           </div>
         </div>
       </div>

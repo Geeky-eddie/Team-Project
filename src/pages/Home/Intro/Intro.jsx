@@ -14,9 +14,8 @@ const Intro = () => {
           <div className="p-3">
             <h1 className="fw-extrabold blue-color">WHY CHOOSE US?</h1>
             <p className="fs-5">
-            Med-Chain is the most widespread application of big data in medicine. Every person has their own digital record, which includes demographics, medical history, allergies, laboratory test results, etc. Records are shared via secure information systems and are available for providers from both the public and private sectors. Every record is comprised of one modifiable file, which means that doctors can implement changes over time with no paperwork and no danger of data replication.
+            Select Med-Chain for an unparalleled experience in healthcare data management. Our platform ensures the utmost security and decentralization of patient records, addressing concerns associated with traditional paper-based systems. With a unique approach of utilizing modifiable files for each record, we enable doctors to implement seamless updates without cumbersome paperwork. Med-Chain's distinct commitment to innovation, data integrity, and user-centric design sets us apart, making us the trusted choice for those seeking a progressive and secure healthcare solution.
 
-EHRs can also trigger warnings and reminders when a patient should get a new lab test or track prescriptions to see if he or she has been following doctor's orders.{" "}
             </p>
             <p className="fs-5">At Med-Chain we ensure a Secure and Decentralized patient record system</p>
           </div>

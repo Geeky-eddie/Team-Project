@@ -13,6 +13,7 @@ import Web5form from "../src/pages/Web5/nextindex";
 
 
 
+
 function App() {
  
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="/success" element={<Success />} />
           <Route path="*" element={<Empty />} />
         </Routes>
+       
         <Footer />
       </Router>
     </div>

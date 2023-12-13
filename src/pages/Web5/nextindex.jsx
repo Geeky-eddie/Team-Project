@@ -244,7 +244,7 @@ const writeToDwnSecretMessage = async (messageObj) => {
         console.log("Send record status in handleSubmit", status);
         setSubmitStatus('Message submitted successfully');
         await fetchMessages();
-        showNotification('Message submitted successfully');
+        showNotification('Message sent successfully');
       } else {
         throw new Error('Failed to create record');
       }
@@ -254,7 +254,7 @@ const writeToDwnSecretMessage = async (messageObj) => {
     } catch (error) {
       console.error('Error in handleSubmit', error);
       setSubmitStatus('Error submitting message: ' + error.message);
-      showNotification('Error submitting message');
+      showNotification('Error sending message');
     }
   };
 
@@ -266,8 +266,8 @@ const writeToDwnSecretMessage = async (messageObj) => {
       text: message,
       timestamp: `${currentDate} ${currentTime}`,
       sender: myDid,
-      type: 'Confidential',
-      recipientDid: recipientDid,
+      type: 'Direct',
+      recipientDid: recipientDid, // Ensure recipientDid is correctly set
       imageUrl: imageUrl,
       fullName: fullName,
       city: city,
@@ -289,7 +289,7 @@ const writeToDwnSecretMessage = async (messageObj) => {
       text: message, 
       timestamp: `${currentDate} ${currentTime}`,
       sender: myDid, 
-      type: 'Drafts',
+      type: 'Secret',
       imageUrl: imageUrl, 
       fullName: fullName,
       city: city,
@@ -308,8 +308,8 @@ const writeToDwnSecretMessage = async (messageObj) => {
         from: myDid,
         message: {
           filter: {
-            protocol: "https://medchain.com",
-            schema: "https://example.com/confidentialMessageSchema",
+            protocol: "https://blackgirlbytes.dev/burn-book-finale",
+            schema: "https://example.com/directMessageSchema",
           },
         },
       });
@@ -333,7 +333,7 @@ const writeToDwnSecretMessage = async (messageObj) => {
     } catch (error) {
       console.error('Error in fetchSentMessages:', error);
     }
-    showNotification('Fetching sent messages...');
+    showNotification('Fetching Appointments...');
   };
 
   const fetchDirectMessages = async () => {
@@ -365,7 +365,7 @@ const writeToDwnSecretMessage = async (messageObj) => {
     } catch (error) {
       console.error('Error in fetchReceivedDirectMessages:', error);
     }
-    showNotification('Fetching received direct messages...');
+    showNotification('Fetching Appointments...');
   };
 
   const fetchMessages = async () => {
@@ -373,25 +373,25 @@ const writeToDwnSecretMessage = async (messageObj) => {
       const userMessages = await fetchUserMessages();
       const directMessages = await fetchDirectMessages();
   
-      // Combine user and direct messages
+     
       const allMessages = [...(userMessages || []), ...(directMessages || [])];
   
-      // Filter out deleted messages based on the user's role
+     
       const filteredMessages = allMessages.filter(message => {
         if (userRole === 'Doctor') {
-          // For doctors, show all messages
+          
           return true;
         } else {
-          // For visitors, filter out deleted messages
+          
           return !message.deleted;
         }
       });
   
       setMessages(filteredMessages);
-      showNotification('Messages fetched successfully');
+      showNotification('Appointments fetched successfully');
     } catch (error) {
       console.error('Error fetching messages:', error);
-      showNotification('Error fetching messages');
+      showNotification('Error fetching Appointments');
     }
   };
 
